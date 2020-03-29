@@ -8,6 +8,10 @@ GLOBAL_LIST_INIT(gyne_names, list())
 	GLOB.gyne_names += gynename
 	return gynename
 
+proc/create_worker_name()
+	var/workername = "[capitalize(pick(GLOB.gyne_architecture|GLOB.gyne_geoforms))]"
+	return workername
+
 //Thanks to:
 // - https://en.wikipedia.org/wiki/List_of_landforms
 // - https://en.wikipedia.org/wiki/Outline_of_classical_architecture
@@ -64,6 +68,8 @@ GLOBAL_LIST_INIT(gyne_architecture, list(
 	"artisan",       "absolute",      "absolutist",  "autonomous",   "collectivist",  "bicameral",     "colonialist",  "federal",
 	"imperial",      "independant",   "managed",     "multilateral", "neutral",       "nonaligned",    "parastatal"
 ))
+
+GLOBAL_LIST_INIT(monarch_workers, list(gyne_architecture|gyne_geoforms))
 
 /decl/cultural_info/culture/ascent
 	name =             CULTURE_ASCENT

@@ -210,6 +210,7 @@
 /datum/species/nabber/monarch
 	name = SPECIES_MONARCH_WORKER
 	name_plural = "Monarch Serpentid Workers"
+	burn_mod =  1.1
 	spawn_flags = SPECIES_IS_RESTRICTED | SPECIES_NO_FBP_CONSTRUCTION | SPECIES_NO_FBP_CHARGEN
 	has_organ = list(
 		BP_BRAIN =             /obj/item/organ/internal/brain/insectoid/nabber,
@@ -228,9 +229,15 @@
 		TAG_RELIGION =  RELIGION_KHARMAANI
 	)
 
+/datum/species/nabber/monarch/handle_environment_special(mob/living/carbon/human/H)
+	return
+
 /datum/species/nabber/monarch/get_bodytype(var/mob/living/carbon/human/H)
 	return SPECIES_NABBER
 
 /datum/species/nabber/monarch/queen
 	name = SPECIES_MONARCH_QUEEN
 	name_plural = "Monarch Serpentid Queens"
+
+/datum/species/nabber/monarch/queen/get_bodytype(var/mob/living/carbon/human/H)
+	return SPECIES_MONARCH_QUEEN

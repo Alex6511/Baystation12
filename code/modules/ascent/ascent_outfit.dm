@@ -9,9 +9,15 @@
 	pda_slot = 0
 	flags =    0
 	
+/decl/hierarchy/outfit/job/ascent/queen
+	name = "Ascent - Queen"
+	r_hand = /obj/item/weapon/rig/mantid/nabber
+	mask = /obj/item/clothing/mask/gas/ascent/monarch
+	
 /decl/hierarchy/outfit/job/ascent/attendant
 	name = "Ascent - Attendant"
-	back = /obj/item/weapon/rig/mantid
+	r_hand = /obj/item/weapon/rig/mantid/nabber
+	mask = /obj/item/clothing/mask/gas/ascent/monarch
 
 /decl/hierarchy/outfit/job/ascent/tech
 	name = "Ascent - Technician"
